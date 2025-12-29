@@ -1,0 +1,14 @@
+class Main{
+    public void m1(int i){
+        System.out.println("int-arg method");
+    }
+    public void m1(float f){
+        System.out.println("float-arg method");
+    }
+    public static void main(String[] args){
+        Main m = new Main();
+        m.m1(10);
+        m.m1(10f);
+        m.m1('a');
+    }
+}
