@@ -5,7 +5,7 @@ class C extends P{
     String s = "Child"; //can also be static
 }
 class Main{
-    public static void main(){
+    public static void main(String[] args){
         P p = new P();
         System.out.println(p.s);
         C c = new C();
