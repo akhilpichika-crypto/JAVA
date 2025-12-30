@@ -1,0 +1,16 @@
+class P{
+    String s = "Parent";
+}
+class C extends P{
+    String s = "Child";
+}
+class Main{
+    public static void main(){
+        P p = new P();
+        System.out.println(p.s);
+        C c = new C();
+        System.out.println(c.s);
+        P p1 = new C();
+        System.out.println(p1.s);
+    }
+}
