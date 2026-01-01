@@ -1,0 +1,7 @@
+class Main{
+    public static void main(String[] args) {
+        Object o = new String("durga");
+        String s = (String) o;
+        System.out.println(s);
+    }
+}
