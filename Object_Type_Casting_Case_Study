@@ -1,0 +1,16 @@
+class Base2{}
+class Der1 extends Base1{}
+class Der2 extends Base1{}
+class Der3 extends Base2{}
+class Der4 extends Base2{}
+class Main{
+    public static void main(String[] args){
+        Base2 b = new Der4();
+        Der4 d = (Der4) b;
+        //Base1 b1 = (Base1) b; //error because Base2 cannot be converted to Base1
+        Base2 b2 = (Base2) b;
+        //Object o = (Der3) b; //error because Der4 cannot be cast to class Der3
+        //Base2 b3 = (Base1) b; //error because Base2 cannot be converted to Base1
+
+    }
+}
