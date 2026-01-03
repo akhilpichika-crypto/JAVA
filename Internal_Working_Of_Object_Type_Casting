@@ -1,0 +1,11 @@
+class Main {
+    public static void main(String[] args) {
+        Integer I = new Integer(10);
+        Number n = (Number) I;
+        Object o = (Object) n;
+
+        System.out.println(I == n);
+        System.out.println(n == o);
+        System.out.println(o == I);
+    }
+}
