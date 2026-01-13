@@ -1,0 +1,31 @@
+interface Shape{
+    public void printSides();
+}
+class Rectangle implements Shape{
+    int sides = 4;
+    String color;
+    public Rectangle(String color){
+        this.color = color;
+    }
+    public void printSides(){
+        System.out.println("Rectangle has " + sides + " edges and this is colored " + this.color);
+    }
+}
+class Pentagon implements Shape{
+    int sides = 5;
+    String color;
+    public Pentagon(String color){
+        this.color = color;
+    }
+    public void printSides(){
+        System.out.println("Pentagon has " + this.sides + " edges and this is colored " + this.color);
+    }
+}
+public class Main{
+    public static void main(String[] args){
+        Rectangle r = new Rectangle("red");
+        Pentagon p = new Pentagon("blue");
+        r.printSides();
+        p.printSides();
+    }
+}
