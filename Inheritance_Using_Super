@@ -1,0 +1,28 @@
+public class Main{
+    public static void main(String[] args){
+        Cone c = new Cone(2,2);
+        System.out.println(c.volume());
+    }
+}
+class Circle{
+    public String type = "2D";
+      int radius;
+
+    public Circle(int r){
+        this.radius = r;
+    }
+    public double area(){
+        return this.radius*this.radius*3.14;
+    }
+}
+class Cone extends Circle{
+    int height;
+    String type = "3D";
+    public Cone(int r, int h){
+        super(r);
+        this.height=h;
+    }
+    public double volume(){
+        return area()*this.height*0.33;
+    }
+}
