@@ -6,6 +6,10 @@ public class Main{
         s.pop();
         s.push();
         s.push();
+        s.push();
+        s.push();
+        s.push();
+        s.push(); //stack overflow
         s.printList();
     }
 }
