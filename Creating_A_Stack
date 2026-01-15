@@ -1,0 +1,68 @@
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Stack s = new Stack(5);
+        s.push();
+        s.pop();
+        s.push();
+        s.push();
+        s.printList();
+    }
+}
+
+abstract class ObjectList{
+    int length;
+    int[] arr;
+    public ObjectList(int len){
+        this.length = len;
+        arr = new int[len];
+    }
+    abstract void printType();
+    abstract void printList();
+}
+class Stack extends ObjectList{
+    int top = -1;
+    Scanner sc = new Scanner(System.in);
+    public Stack(int l){
+        super(l);
+    }
+    public void push(){
+        if (top == length-1){
+            System.out.println("Stack overflow");
+            return;
+        }
+        else{
+            System.out.println("Number to push? ");
+            int temp = sc.nextInt();
+            top++;
+            arr[top] = temp;
+            System.out.println("top: " + top);
+        }
+    }
+    public void pop(){
+        if (top<0){
+            System.out.println("Stack underflow");
+        }
+        else{
+            System.out.println("Popped: " + arr[top]);
+            top--;
+            System.out.println("top: " + top);
+        }
+    }
+    public void peek(){
+        System.out.println(arr[top]);
+    }
+    public void printType(){
+        System.out.println("This is a stack");
+    }
+    public void printList(){
+        if(this.top < 0){
+            System.out.println("Stack is empty.");
+        }
+        System.out.println(arr[top] + "<-top");
+        for(int i = (top-1); i>=0; i--) {
+                    System.out.println(arr[i]);
+            }
+        }
+    }
+
