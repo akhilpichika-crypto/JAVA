@@ -1,0 +1,27 @@
+import java.util.*;
+public class Main{
+    public static void main(String args[]){
+        int arr[] = {8,8,7,6,5};
+        int sL = Solution.secondLargestElement(arr);
+        System.out.println("Second Largest Element: " + sL);
+    }
+}
+class Solution {
+    public static int secondLargestElement(int[] nums) {
+        int largest = Integer.MIN_VALUE;
+        int second_largest = Integer.MIN_VALUE;
+        if (nums.length < 2){
+            return -1;
+        }
+        for (int i=0; i<nums.length ; i++){
+            if(nums[i]>largest){
+                second_largest = largest;
+                largest = nums[i];
+            }
+            else if(nums[i]>second_largest && nums[i] != largest){
+                second_largest = nums[i];
+            }
+        }
+        return second_largest;
+    }
+}
