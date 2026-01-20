@@ -12,7 +12,7 @@ class Solution {
       int index;
       for (index = 0; index <nums.length;index++){
         if (nums[index] == target){
-            return index;
+            return index;               //return immediately exits the function and goes back to main
         }
       }
       return -1;
