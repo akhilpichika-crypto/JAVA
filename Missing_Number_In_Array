@@ -1,0 +1,19 @@
+public class Main{
+    public static void main(String args[]){
+        int[] nums = {1,3,6,4,2,5};
+        int N = 7;
+        Solution sol = new Solution();
+        int k = sol.missingNumber(nums,N);
+        System.out.println("Missing number: " + k);
+    }
+}
+class Solution {
+    public int missingNumber(int[] nums, int N) {
+        int Sum = (N * (N+1)) / 2;
+        int actualsum = 0;
+        for (int i= 0; i<nums.length; i++){
+            actualsum += nums[i];
+        }
+        return Sum-actualsum;
+    }
+}
