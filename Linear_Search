@@ -10,7 +10,6 @@ public class Main{
 class Solution {
     public int linearSearch(int nums[], int target) {
       int index;
-      boolean flag = false;
       for (index = 0; index <nums.length;index++){
         if (nums[index] == target){
             return index;
