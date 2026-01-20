@@ -1,11 +1,17 @@
 public class Main{
     public static void main(String args[]){
         int[] nums = {-2,2,4,4,4,4,5,5};
-        System.out.println(Solution.removeDuplicates(nums));
+        Solution sol = new Solution();
+        int k = sol.removeDuplicates(nums);
+        System.out.println("Unique count = " + k);
+        System.out.print("Array after removing duplicates: ");
+        for (int i=0; i<k; i++){
+            System.out.print(nums[i] + " ");
+        }
     }
 }
 class Solution {
-    public static int removeDuplicates(int[] nums) {
+    public int removeDuplicates(int[] nums) {
         int i = 0;
         for (int j = 1; j < nums.length; j++){
             if (nums[i] != nums[j]) {
