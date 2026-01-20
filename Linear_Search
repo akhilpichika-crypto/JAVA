@@ -1,0 +1,21 @@
+public class Main{
+  public static void main(String args[]){
+    int[] nums = {1,3,5,-4,1};
+    int target = 3;
+    Solution sol = new Solution();
+    int k = sol.linearSearch(nums,target);
+    System.out.println("Index is: " + k);
+  }
+}
+class Solution {
+    public int linearSearch(int nums[], int target) {
+      int index;
+      boolean flag = false;
+      for (index = 0; index <nums.length;index++){
+        if (nums[index] == target){
+            return index;
+        }
+      }
+      return -1;
+    }
+}
