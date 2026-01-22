@@ -3,8 +3,8 @@ public class Main{
         int[] nums = {1,2,3,4,5};
         Solution sol = new Solution();
         sol.rotateArrayByOne(nums);
-        for (int num : nums) {
-            System.out.print(num + " ");
+        for (int num : nums) {                    //used an enhanced form of for loop
+            System.out.print(num + " ");          //only used to read elements and when we dont need the index
         }
     }
 }
