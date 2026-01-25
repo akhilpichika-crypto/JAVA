@@ -1,0 +1,55 @@
+import java.util.*;
+public class Main{
+    public static void main(String args[]){
+        int[] nums1 = {1,2,3,4,5};
+        int[] nums2 = {1,2,7};
+        int n = nums1.length;
+        int m = nums2.length;
+        Solution sol = new Solution();
+        List<Integer> result = sol.unionArray(nums1, nums2, n, m);
+        for (int val : result) {
+            System.out.print(val + " ");
+        }
+    }
+}
+class Solution {
+    public List<Integer> unionArray(int[] nums1, int[] nums2,int n, int m) {
+        List<Integer> Union = new ArrayList<>();
+        int i=0 , j =0;
+        while (i<n && j<m){
+            if (nums1[i]<nums2[j]){
+                if (Union.isEmpty() || Union.get(Union.size() - 1) != nums1[i]){
+                    Union.add(nums1[i]);
+                }
+                i++;
+            }
+            else if(nums2[j]< nums1[i]){
+                if (Union.isEmpty() || Union.get(Union.size() - 1) != nums2[j]){
+                    Union.add(nums2[j]);
+                }
+                j++;
+            }
+            else {
+                if (Union.isEmpty() || Union.get(Union.size() - 1) != nums1[i]){
+                    Union.add(nums1[i]);
+                }
+                i++;
+                j++;
+            }
+        }
+
+        while(i<n){
+            if (Union.isEmpty() || Union.get(Union.size() - 1) != nums1[i]){
+                Union.add(nums1[i]);
+            }
+            i++;
+        }
+        while (j<m){
+            if (Union.isEmpty() || Union.get(Union.size() - 1) != nums2[j]){
+                Union.add(nums2[j]);
+            }
+            j++;
+        }
+        return Union;
+    }
+}
