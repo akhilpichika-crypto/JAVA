@@ -14,7 +14,7 @@ public class Main{
 }
 class Solution {
     public List<Integer> unionArray(int[] nums1, int[] nums2,int n, int m) {
-        List<Integer> Union = new ArrayList<>();
+        List<Integer> Union = new ArrayList<>();                                // List is an interface; ArrayList is a class...So an object of a class is being instantiated using a interface reference
         int i=0 , j =0;
         while (i<n && j<m){
             if (nums1[i]<nums2[j]){
